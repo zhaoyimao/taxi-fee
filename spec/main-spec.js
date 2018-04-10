@@ -2,10 +2,10 @@ const main = require('../main/main');
 
 describe('taxi fee', function () {
     // write your tests here...
-    it("公里数等于两千米，并没有等待时间",function(){
+    it("公里数等于两千米，没有等待时间",function(){
         spyOn(console,'log');
-        let input={km:2,wai:0};//公里数为2,等待时间为0
-        main(inputs);
+        let input={km:2,wait:0};//公里数为2,等待时间为0
+        main(input);
         let text='尊敬的用户，此次您共消费6元';
         expect(console.log).toHaveBeenCalledWith(text);
     });
@@ -20,7 +20,7 @@ describe('taxi fee', function () {
         spyOn(console,'log');
         let input={km:10,wait:10};
         main(input);
-        let text='尊敬的用户，此次您共消费13元';
+        let text='尊敬的用户，此次您共消费16元';
         expect(console.log).toHaveBeenCalledWith(text);
     });
 });
