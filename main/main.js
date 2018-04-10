@@ -1,7 +1,7 @@
 module.exports = function main(input) {
     let result=Calculation(input);
-    let str=print(result);
-    return str;
+    let price_str=pricePrint(result);
+    return price_str;
 };
 function Calculation(input){
     let result;
@@ -16,7 +16,7 @@ function Calculation(input){
     }
     return result.toFixed(0);
 }
-function print(result){
+function pricePrint(result){
     let str;
     str=`尊敬的用户，此次您共消费${result}元`;
     console.log(str);
